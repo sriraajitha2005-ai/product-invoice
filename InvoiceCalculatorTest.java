@@ -14,7 +14,7 @@ void testProductAmount() {
 
 assertEquals(5000,
 
-invoice.calculateProductAmount(2500, 2));
+invoice.calculateProductAmount(2500, 3));
 
 }
 
