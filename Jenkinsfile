@@ -31,12 +31,5 @@ pipeline
                 bat 'mvn package'
             }
         }
-        stage('Failure Test') 
-        {
-          steps 
-          {
-             error('This is a deliberate failure for demonstration')
-          }
-       }
     }
 }
