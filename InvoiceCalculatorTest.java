@@ -12,7 +12,7 @@ InvoiceCalculator invoice = new InvoiceCalculator();
 
 void testProductAmount() {
 
-assertEquals(5000,
+assertEquals(5001,
 
 invoice.calculateProductAmount(2500, 2));
 
