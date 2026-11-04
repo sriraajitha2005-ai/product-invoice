@@ -1,5 +1,10 @@
+
 pipeline {
     agent any
+
+    tools {
+        maven 'Maven-3.9.16'
+    }
 
     stages {
         stage('Checkout') {
@@ -10,19 +15,19 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat '"C:\\Program Files\\Maven\\apache-maven-3.9.16-bin\\apache-maven-3.9.16\\bin\\mvn.cmd" clean compile'
+                bat 'mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
-                bat '"C:\\Program Files\\Maven\\apache-maven-3.9.16-bin\\apache-maven-3.9.16\\bin\\mvn.cmd" test'
+                bat 'mvn test'
             }
         }
 
         stage('Package') {
             steps {
-                bat '"C:\\Program Files\\Maven\\apache-maven-3.9.16-bin\\apache-maven-3.9.16\\bin\\mvn.cmd" package'
+                bat 'mvn package'
             }
         }
     }
